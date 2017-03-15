@@ -2,15 +2,11 @@
   "name": "angular-bootstrap-switch",
   "version": "0.5.1",
   "main": "dist/angular-bootstrap-switch.js",
-  "author": {
-    "name": "Francesco Pontillo",
-    "email": "francescopontillo@gmail.com",
-    "url": "https://github.com/frapontillo"
-  },
+  "author": "Francesco Pontillo <francescopontillo@gmail.com> (https://github.com/frapontillo)",
   "homepage": "https://github.com/frapontillo/angular-bootstrap-switch",
   "repository": {
     "type": "git",
-    "url": "git@github.com:frapontillo/angular-bootstrap-switch.git"
+    "url": "git+ssh://git@github.com/frapontillo/angular-bootstrap-switch.git"
   },
   "license": "Apache-2.0",
   "dependencies": {},
@@ -36,5 +32,13 @@
   },
   "scripts": {
     "test": "grunt test-travis"
+  },
+  "description": "angular-bootstrap-switch ========================",
+  "bugs": {
+    "url": "https://github.com/frapontillo/angular-bootstrap-switch/issues"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
   }
 }
