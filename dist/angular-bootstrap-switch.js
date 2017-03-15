@@ -1,6 +1,6 @@
 /**
  * angular-bootstrap-switch
- * @version v0.5.1 - 2016-06-04
+ * @version v0.5.1 - 2017-03-14
  * @author Francesco Pontillo (francescopontillo@gmail.com)
  * @link https://github.com/frapontillo/angular-bootstrap-switch
  * @license Apache License 2.0(http://www.apache.org/licenses/LICENSE-2.0.html)
@@ -187,9 +187,10 @@ angular.module('frapontillo.bootstrap-switch')
           });
 
           // When the model changes
-          controller.$render = function () {
+          //controller.$render = function () {
+          scope.$watch(attrs.ngModel, function (newValue) {
             initMaybe();
-            var newValue = controller.$modelValue;
+            //var newValue = controller.$modelValue;
             if (newValue !== undefined && newValue !== null) {
               element.bootstrapSwitch('state', newValue === getTrueValue(), true);
             } else {
@@ -197,7 +198,8 @@ angular.module('frapontillo.bootstrap-switch')
               controller.$setViewValue(undefined);
             }
             switchChange();
-          };
+          });
+
 
           // angular attribute to switch property bindings
           var bindings = {

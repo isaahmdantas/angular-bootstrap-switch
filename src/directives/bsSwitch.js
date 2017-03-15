@@ -174,9 +174,10 @@ angular.module('frapontillo.bootstrap-switch')
           });
 
           // When the model changes
-          controller.$render = function () {
+          //controller.$render = function () {
+          scope.$watch(attrs.ngModel, function (newValue) {
             initMaybe();
-            var newValue = controller.$modelValue;
+            //var newValue = controller.$modelValue;
             if (newValue !== undefined && newValue !== null) {
               element.bootstrapSwitch('state', newValue === getTrueValue(), true);
             } else {
@@ -184,7 +185,8 @@ angular.module('frapontillo.bootstrap-switch')
               controller.$setViewValue(undefined);
             }
             switchChange();
-          };
+          });
+
 
           // angular attribute to switch property bindings
           var bindings = {
